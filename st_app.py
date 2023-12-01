@@ -16,7 +16,7 @@ from sklearn.decomposition import PCA
 
 ## Lyrical Similarity Stuff
 
-df = pd.read_excel('/Users/leonardocardozo/Python/DSU/Taylor Swift/Taylor_Swift_Genius_Data.xlsx')
+df = pd.read_excel('Taylor_Swift_Genius_Data.xlsx')
 
 # Remove stopwords
 sw_nltk = stopwords.words('english')
