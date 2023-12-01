@@ -58,7 +58,7 @@ embeddings = pd.DataFrame(output)
 # Saving embeddings to host
 embeddings.to_csv("embeddings.csv", index=False)
 
-faqs_embeddings = load_dataset('cardo14/Taylor_Swift_Embeddings')
+faqs_embeddings = load_dataset('https://huggingface.co/datasets/cardo14/Taylor_Swift_Embeddings')
 dataset_embeddings = torch.from_numpy(faqs_embeddings["train"].to_pandas().to_numpy()).to(torch.float)
 
 ### End lyrical similarities
