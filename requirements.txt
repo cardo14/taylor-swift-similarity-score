@@ -3,3 +3,13 @@ numpy
 pandas
 pydeck
 streamlit
+seaborn
+nltk
+nltk.corpus
+retry
+torch
+datasets
+sentence_transformers.util
+sklearn.preprocessing
+sklearn.metrics.pairwise
+sklearn.decomposition
