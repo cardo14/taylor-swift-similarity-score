@@ -30,7 +30,7 @@ for i in range(len(df['Lyrics'])):
     lyrics_no_stopwords.append(new_text)
 df['Lyrics'] = lyrics_no_stopwords
 
-model_id = "sentence-transformers/all-mpnet-base-v22"
+model_id = "sentence-transformers/all-mpnet-base-v2"
 hf_token = "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"
 
 api_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{model_id}"
