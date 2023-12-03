@@ -30,7 +30,7 @@ for i in range(len(df['Lyrics'])):
     lyrics_no_stopwords.append(new_text)
 df['Lyrics'] = lyrics_no_stopwords
 
-model_id = "sentence-transformers/all-MiniLM-L6-v2"
+model_id = "sentence-transformers/all-mpnet-base-v22"
 hf_token = "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"
 
 api_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{model_id}"
@@ -58,7 +58,7 @@ embeddings = pd.DataFrame(output)
 # Saving embeddings to host
 embeddings.to_csv("embeddings.csv", index=False)
 
-faqs_embeddings = load_dataset('cardo14/Taylor_Swift_Embeddings')
+faqs_embeddings = load_dataset('cardo14/Taylor_Swift_Embeddings_2')
 dataset_embeddings = torch.from_numpy(faqs_embeddings["train"].to_pandas().to_numpy()).to(torch.float)
 
 ### End lyrical similarities
